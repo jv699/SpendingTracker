@@ -8,15 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var bShoWMenu = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello!")
-        }
-        .padding()
-    }
+            HStack {
+                Button {
+                    bShoWMenu.toggle()
+                } label: {
+                    Text("test")
+                }
+                Spacer()
+            } // hstack
+            .padding(.leading)
+            .padding(.top)
+            
+            Spacer()
+        } //vstack
+    } //body
+    
 }
 
 #Preview {
